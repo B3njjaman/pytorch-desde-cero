@@ -1,0 +1,16 @@
+# Jupyter y Python
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Modelos guardados por los notebooks
+*.pth
+*.pt
+
+# Configuración local del editor
+.vscode/
+
+# Material de referencia personal (capturas del curso original)
+/*.png

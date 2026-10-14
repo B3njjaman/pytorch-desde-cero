@@ -14,3 +14,10 @@ venv/
 
 # Material de referencia personal (capturas del curso original)
 /*.png
+
+# graphify: solo se versionan el grafo y su reporte
+graphify-out/cache/
+graphify-out/corpus/
+graphify-out/manifest.json
+graphify-out/cost.json
+graphify-out/.graphify_*

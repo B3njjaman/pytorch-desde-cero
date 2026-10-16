@@ -11,7 +11,7 @@ Este módulo sigue el primer módulo del curso de PyTorch de DeepLearning.AI en 
 | [02 · Descenso de gradiente](02-descenso-de-gradiente) | [Descenso de gradiente](02-descenso-de-gradiente/01_descenso_de_gradiente.ipynb) · [SGD y mini-batches](02-descenso-de-gradiente/02_sgd_y_minibatches.ipynb) |
 | [03 · Optimalidad](03-optimalidad) | [Mínimos, convexidad y puntos silla](03-optimalidad/01_optimalidad.ipynb) |
 | [04 · Matemática de PyTorch](04-matematica-de-pytorch) | [Autograd y regla de la cadena](04-matematica-de-pytorch/01_autograd_y_regla_de_la_cadena.ipynb) · [Capas y activaciones](04-matematica-de-pytorch/02_capas_y_activaciones.ipynb) · [Funciones de pérdida](04-matematica-de-pytorch/03_funciones_de_perdida.ipynb) · [Optimizadores](04-matematica-de-pytorch/04_optimizadores.ipynb) |
-| [05 · Profundización](05-profundizacion) | [El perceptrón de Rosenblatt](05-profundizacion/01_perceptron.ipynb) · [XOR y redes feedforward](05-profundizacion/02_xor_y_redes_feedforward.ipynb) · [La espiral: fronteras de decisión](05-profundizacion/03_espiral_y_fronteras_de_decision.ipynb) |
+| [05 · Profundización](05-profundizacion) | [El perceptrón de Rosenblatt](05-profundizacion/01_perceptron.ipynb) · [XOR y redes feedforward](05-profundizacion/02_xor_y_redes_feedforward.ipynb) · [La espiral: fronteras de decisión](05-profundizacion/03_espiral_y_fronteras_de_decision.ipynb) · [Ajuste polinomial y sobreajuste](05-profundizacion/04_ajuste_polinomial_y_sobreajuste.ipynb) |
 
 La descripción de cada notebook está en el [README principal](../README.md).
 
@@ -32,7 +32,7 @@ Esta es la lista de lecturas que el curso recomienda para el módulo 1, ordenada
 
 ### Machine learning en general
 
-- **[Bishop: Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/)** (libro, PDF gratis en la página de Microsoft Research). El tratamiento matemático de referencia de los modelos probabilísticos y los algoritmos de aprendizaje. En los capítulos 1 a 4 deduce el error cuadrático y la entropía cruzada a partir de la máxima verosimilitud, lo mismo que hace `04-matematica-de-pytorch/03_funciones_de_perdida`.
+- **[Bishop: Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/)** (libro, PDF gratis en la página de Microsoft Research). El tratamiento matemático de referencia de los modelos probabilísticos y los algoritmos de aprendizaje. En los capítulos 1 a 4 deduce el error cuadrático y la entropía cruzada a partir de la máxima verosimilitud, lo mismo que hace `04-matematica-de-pytorch/03_funciones_de_perdida`. **En código:** [ajuste polinomial y sobreajuste](05-profundizacion/04_ajuste_polinomial_y_sobreajuste.ipynb).
 - **[Aurélien Géron: Hands-On Machine Learning](https://github.com/ageron/handson-ml3)** (libro; los notebooks son gratis). Una guía práctica, basada en proyectos, para construir, evaluar y poner en producción sistemas de ML.
 - **[DeepLearning.AI: Machine Learning Specialization](https://www.deeplearning.ai/courses/machine-learning-specialization/)** (curso). Sobre todo la semana 1: aprendizaje supervisado, métricas y el flujo de trabajo de un proyecto de ML.
 

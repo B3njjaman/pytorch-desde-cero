@@ -25,6 +25,7 @@ Los notebooks siguen los módulos del curso de PyTorch de DeepLearning.AI en Cou
 | **05 · Profundización** | [El perceptrón de Rosenblatt](modulo-1/05-profundizacion/01_perceptron.ipynb) | La regla de aprendizaje, el teorema de convergencia de Novikoff, por qué XOR no se puede con una neurona, y la regla vista como descenso de gradiente |
 | | [XOR y redes feedforward](modulo-1/05-profundizacion/02_xor_y_redes_feedforward.ipynb) | La solución exacta de XOR de Goodfellow, cómo la capa oculta transforma el espacio, por qué algunas redes se atascan, aproximación universal y el costo de no tener profundidad |
 | | [La espiral: fronteras de decisión](modulo-1/05-profundizacion/03_espiral_y_fronteras_de_decision.ipynb) | Clasificador lineal contra una red en la espiral de CS231n, de qué rectas está hecha la frontera, el tamaño de la capa oculta y la regularización L2 |
+| | [Ajuste polinomial y sobreajuste](modulo-1/05-profundizacion/04_ajuste_polinomial_y_sobreajuste.ipynb) | La sección 1.1 de Bishop: error de entrenamiento y de prueba, coeficientes que explotan, más datos, regularización L2, validación cruzada y la misma solución con LBFGS |
 
 En la parte 04 cada función de PyTorch se trata igual: su fórmula, de dónde sale, una implementación a mano y una comprobación con `torch.allclose` de que coincide con la de PyTorch.
 

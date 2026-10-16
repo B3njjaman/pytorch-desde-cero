@@ -9,6 +9,9 @@ venv/
 *.pth
 *.pt
 
+# Conjuntos de datos que descargan los notebooks (MNIST en modulo-2/data)
+data/
+
 # Configuración local del editor
 .vscode/
 

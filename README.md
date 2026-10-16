@@ -23,6 +23,7 @@ Los notebooks siguen los módulos del curso de PyTorch de DeepLearning.AI en Cou
 | | [Funciones de pérdida](modulo-1/04-matematica-de-pytorch/03_funciones_de_perdida.ipynb) | Máxima verosimilitud, `MSELoss`, `L1Loss`, `HuberLoss`, `BCELoss`, `BCEWithLogitsLoss`, `CrossEntropyLoss` |
 | | [Optimizadores](modulo-1/04-matematica-de-pytorch/04_optimizadores.ipynb) | `SGD`, `weight_decay`, momento, Nesterov, `RMSprop`, `Adam`, `AdamW` |
 | **05 · Profundización** | [El perceptrón de Rosenblatt](modulo-1/05-profundizacion/01_perceptron.ipynb) | La regla de aprendizaje, el teorema de convergencia de Novikoff, por qué XOR no se puede con una neurona, y la regla vista como descenso de gradiente |
+| | [XOR y redes feedforward](modulo-1/05-profundizacion/02_xor_y_redes_feedforward.ipynb) | La solución exacta de XOR de Goodfellow, cómo la capa oculta transforma el espacio, por qué algunas redes se atascan, aproximación universal y el costo de no tener profundidad |
 
 En la parte 04 cada función de PyTorch se trata igual: su fórmula, de dónde sale, una implementación a mano y una comprobación con `torch.allclose` de que coincide con la de PyTorch.
 

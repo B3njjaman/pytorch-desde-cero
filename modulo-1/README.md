@@ -11,7 +11,7 @@ Este módulo sigue el primer módulo del curso de PyTorch de DeepLearning.AI en 
 | [02 · Descenso de gradiente](02-descenso-de-gradiente) | [Descenso de gradiente](02-descenso-de-gradiente/01_descenso_de_gradiente.ipynb) · [SGD y mini-batches](02-descenso-de-gradiente/02_sgd_y_minibatches.ipynb) |
 | [03 · Optimalidad](03-optimalidad) | [Mínimos, convexidad y puntos silla](03-optimalidad/01_optimalidad.ipynb) |
 | [04 · Matemática de PyTorch](04-matematica-de-pytorch) | [Autograd y regla de la cadena](04-matematica-de-pytorch/01_autograd_y_regla_de_la_cadena.ipynb) · [Capas y activaciones](04-matematica-de-pytorch/02_capas_y_activaciones.ipynb) · [Funciones de pérdida](04-matematica-de-pytorch/03_funciones_de_perdida.ipynb) · [Optimizadores](04-matematica-de-pytorch/04_optimizadores.ipynb) |
-| [05 · Profundización](05-profundizacion) | [El perceptrón de Rosenblatt](05-profundizacion/01_perceptron.ipynb) |
+| [05 · Profundización](05-profundizacion) | [El perceptrón de Rosenblatt](05-profundizacion/01_perceptron.ipynb) · [XOR y redes feedforward](05-profundizacion/02_xor_y_redes_feedforward.ipynb) |
 
 La descripción de cada notebook está en el [README principal](../README.md).
 
@@ -22,8 +22,8 @@ Esta es la lista de lecturas que el curso recomienda para el módulo 1, ordenada
 ### Fundamentos
 
 - **[PyTorch: Deep Learning with PyTorch, A 60 Minute Blitz](https://docs.pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)** (tutorial oficial, gratis). Un recorrido rápido y práctico por tensores, autograd y el entrenamiento de una red pequeña. Va bien junto a `00-fundamentos`.
-- **[3Blue1Brown: Neural networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)** (videos, gratis). Los capítulos 1 y 2 explican con animaciones qué es una neurona, qué son los pesos y cómo funciona el descenso de gradiente. Los capítulos siguientes, sobre retropropagación, acompañan a `04-matematica-de-pytorch/01_autograd_y_regla_de_la_cadena`.
-- **[Goodfellow, Bengio y Courville: Deep Learning](https://www.deeplearningbook.org/)** (libro, gratis en línea). El texto de referencia de la teoría. Los capítulos 1 a 6 cubren álgebra lineal, probabilidad, cálculo numérico (con optimización por gradiente), fundamentos de machine learning y redes feedforward, y conectan con `03-optimalidad` y `04-matematica-de-pytorch`. Los capítulos posteriores tratan regularización, optimización avanzada y redes convolucionales.
+- **[3Blue1Brown: Neural networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)** (videos, gratis). Los capítulos 1 y 2 explican con animaciones qué es una neurona, qué son los pesos y cómo funciona el descenso de gradiente. Los capítulos siguientes, sobre retropropagación, acompañan a `04-matematica-de-pytorch/01_autograd_y_regla_de_la_cadena`. **En código:** [XOR y redes feedforward](05-profundizacion/02_xor_y_redes_feedforward.ipynb).
+- **[Goodfellow, Bengio y Courville: Deep Learning](https://www.deeplearningbook.org/)** (libro, gratis en línea). El texto de referencia de la teoría. Los capítulos 1 a 6 cubren álgebra lineal, probabilidad, cálculo numérico (con optimización por gradiente), fundamentos de machine learning y redes feedforward, y conectan con `03-optimalidad` y `04-matematica-de-pytorch`. Los capítulos posteriores tratan regularización, optimización avanzada y redes convolucionales. **En código:** [XOR y redes feedforward](05-profundizacion/02_xor_y_redes_feedforward.ipynb).
 
 ### IA: historia y contexto
 

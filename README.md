@@ -53,6 +53,8 @@ El módulo 2 usa MNIST, que los notebooks descargan la primera vez en `modulo-2/
 
 Dentro del módulo 1, las partes 00 a 03 están pensadas para leerse en orden. La parte 04 es más formal y se puede leer al final o ir consultando a medida que aparecen las funciones en las partes anteriores. Los notebooks de la parte 05 son independientes entre sí y suponen haber leído hasta la parte 01.
 
+El módulo 2 supone haber leído hasta la parte 01 del módulo 1. Sus partes siguen el orden del curso, y la parte 04 junta todo lo anterior.
+
 Conocimientos previos: Python básico. Para las partes 03 y 04 ayuda haber visto derivadas y matrices, aunque todo lo que se usa se explica en el momento.
 
 ## Cómo ejecutarlos

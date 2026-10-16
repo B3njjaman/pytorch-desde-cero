@@ -13,6 +13,7 @@ Los notebooks siguen los módulos del curso de PyTorch de DeepLearning.AI en Cou
 | Parte | Notebook | Qué cubre |
 |---|---|---|
 | **00 · Fundamentos** | [Tensores, autograd y una neurona](modulo-1/00-fundamentos/01_tensores_autograd_y_una_neurona.ipynb) | Tensores, formas, broadcasting, producto matricial, autograd, una neurona entrenada de tres formas |
+| | [Tensores a fondo](modulo-1/00-fundamentos/02_tensores_a_fondo.ipynb) | Crear tensores desde listas y NumPy, memoria y strides, vistas y copias, indexado, promoción de tipos, broadcasting, máscaras, los errores más comunes y cómo leerlos |
 | **01 · Red neuronal simple** | [Una red neuronal simple](modulo-1/01-red-neuronal-simple/01_red_neuronal_simple.ipynb) | El flujo completo: datos, modelo, pérdida, optimizador, entrenamiento y predicción. De una neurona a una red con capa oculta y ReLU |
 | **02 · Descenso de gradiente** | [Descenso de gradiente](modulo-1/02-descenso-de-gradiente/01_descenso_de_gradiente.ipynb) | Qué hace `optimizer.step()`, tasa de aprendizaje, superficie de pérdida, por qué normalizar |
 | | [SGD y mini-batches](modulo-1/02-descenso-de-gradiente/02_sgd_y_minibatches.ipynb) | Gradiente estocástico, tamaño de lote, ruido, tasa decreciente, `DataLoader` |

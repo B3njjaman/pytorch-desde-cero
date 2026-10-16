@@ -27,6 +27,7 @@ Los notebooks siguen los módulos del curso de PyTorch de DeepLearning.AI en Cou
 | | [La espiral: fronteras de decisión](modulo-1/05-profundizacion/03_espiral_y_fronteras_de_decision.ipynb) | Clasificador lineal contra una red en la espiral de CS231n, de qué rectas está hecha la frontera, el tamaño de la capa oculta y la regularización L2 |
 | | [Ajuste polinomial y sobreajuste](modulo-1/05-profundizacion/04_ajuste_polinomial_y_sobreajuste.ipynb) | La sección 1.1 de Bishop: error de entrenamiento y de prueba, coeficientes que explotan, más datos, regularización L2, validación cruzada y la misma solución con LBFGS |
 | | [Buscador de tasa y one-cycle](modulo-1/05-profundizacion/05_buscador_de_tasa_y_one_cycle.ipynb) | El buscador de tasa de aprendizaje y la política one-cycle de fast.ai, implementados a mano y comparados con OneCycleLR, contra una tasa fija |
+| | [Un proyecto de punta a punta](modulo-1/05-profundizacion/06_proyecto_de_punta_a_punta.ipynb) | Del archivo CSV al modelo guardado: validar datos, separar entrenamiento, validación y prueba, líneas base, Dataset, DataLoader y nn.Module, punto de control, análisis de errores y el sesgo entre entrenamiento y servicio |
 
 En la parte 04 cada función de PyTorch se trata igual: su fórmula, de dónde sale, una implementación a mano y una comprobación con `torch.allclose` de que coincide con la de PyTorch.
 

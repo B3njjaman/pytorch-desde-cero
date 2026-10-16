@@ -11,7 +11,7 @@ Este módulo sigue el primer módulo del curso de PyTorch de DeepLearning.AI en 
 | [02 · Descenso de gradiente](02-descenso-de-gradiente) | [Descenso de gradiente](02-descenso-de-gradiente/01_descenso_de_gradiente.ipynb) · [SGD y mini-batches](02-descenso-de-gradiente/02_sgd_y_minibatches.ipynb) |
 | [03 · Optimalidad](03-optimalidad) | [Mínimos, convexidad y puntos silla](03-optimalidad/01_optimalidad.ipynb) |
 | [04 · Matemática de PyTorch](04-matematica-de-pytorch) | [Autograd y regla de la cadena](04-matematica-de-pytorch/01_autograd_y_regla_de_la_cadena.ipynb) · [Capas y activaciones](04-matematica-de-pytorch/02_capas_y_activaciones.ipynb) · [Funciones de pérdida](04-matematica-de-pytorch/03_funciones_de_perdida.ipynb) · [Optimizadores](04-matematica-de-pytorch/04_optimizadores.ipynb) |
-| [05 · Profundización](05-profundizacion) | [El perceptrón de Rosenblatt](05-profundizacion/01_perceptron.ipynb) · [XOR y redes feedforward](05-profundizacion/02_xor_y_redes_feedforward.ipynb) |
+| [05 · Profundización](05-profundizacion) | [El perceptrón de Rosenblatt](05-profundizacion/01_perceptron.ipynb) · [XOR y redes feedforward](05-profundizacion/02_xor_y_redes_feedforward.ipynb) · [La espiral: fronteras de decisión](05-profundizacion/03_espiral_y_fronteras_de_decision.ipynb) |
 
 La descripción de cada notebook está en el [README principal](../README.md).
 
@@ -46,7 +46,7 @@ Esta es la lista de lecturas que el curso recomienda para el módulo 1, ordenada
 ### Deep learning: teoría
 
 - **[Michael Nielsen: Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/)** (libro, gratis en línea). Una explicación paso a paso, con ejemplos interactivos, de la retropropagación y las ideas centrales del deep learning. El capítulo 2 es la mejor compañía para `04-matematica-de-pytorch/01_autograd_y_regla_de_la_cadena`.
-- **[CS231n: Neural Networks Part 1](https://cs231n.github.io/neural-networks-1/)** (apuntes de Stanford, gratis). Perceptrones multicapa, activaciones, inicialización y consejos prácticos para entrenar. Acompaña a `04-matematica-de-pytorch/02_capas_y_activaciones`.
+- **[CS231n: Neural Networks Part 1](https://cs231n.github.io/neural-networks-1/)** (apuntes de Stanford, gratis). Perceptrones multicapa, activaciones, inicialización y consejos prácticos para entrenar. Acompaña a `04-matematica-de-pytorch/02_capas_y_activaciones`. **En código:** [la espiral: fronteras de decisión](05-profundizacion/03_espiral_y_fronteras_de_decision.ipynb).
 - **[DeepLearning.AI: Deep Learning Specialization](https://www.deeplearning.ai/courses/deep-learning-specialization/)** (curso). Redes neuronales, técnicas de optimización, redes convolucionales y recurrentes, y aplicaciones prácticas.
 
 ### El ciclo de vida de un proyecto de ML
@@ -56,5 +56,5 @@ Esta es la lista de lecturas que el curso recomienda para el módulo 1, ordenada
 
 ### Redes neuronales: intuición visual
 
-- **[Welch Labs: Neural Networks Demystified](https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU)** (videos, gratis). Videos cortos que construyen la intuición sobre capas, activaciones y fronteras de decisión.
+- **[Welch Labs: Neural Networks Demystified](https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU)** (videos, gratis). Videos cortos que construyen la intuición sobre capas, activaciones y fronteras de decisión. **En código:** [la espiral: fronteras de decisión](05-profundizacion/03_espiral_y_fronteras_de_decision.ipynb).
 - **[MIT 6.S191: Introduction to Deep Learning](https://introtodeeplearning.com/)** (clases y diapositivas, gratis). Un complemento visual y conciso de los fundamentos del deep learning.

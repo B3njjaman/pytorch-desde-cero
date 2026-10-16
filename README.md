@@ -84,4 +84,4 @@ Todos los notebooks corren en CPU, sin GPU. La mayoría tarda unos segundos. Los
 
 ## Créditos
 
-El escenario del repartidor de `modulo-1/01-red-neuronal-simple` está inspirado en el primer laboratorio del curso de PyTorch de DeepLearning.AI en Coursera. Los datos, el código y las explicaciones de este repositorio son propios. La lista de lecturas de cada módulo es la que recomienda ese curso.
+El escenario del repartidor de `modulo-1/01-red-neuronal-simple` está inspirado en el primer laboratorio del curso de PyTorch de DeepLearning.AI en Coursera, y el mensaje secreto de `modulo-2/04-clasificacion-de-imagenes`, en la presentación del segundo módulo del mismo curso. Los datos, el código y las explicaciones de este repositorio son propios. La lista de lecturas de cada módulo es la que recomienda ese curso.

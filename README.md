@@ -58,7 +58,7 @@ También se pueden abrir directamente en VS Code con la extensión de Jupyter.
 
 Abre `https://colab.research.google.com/github/B3njjaman/pytorch-desde-cero` y elige el notebook. Colab ya trae PyTorch instalado.
 
-Todos los notebooks corren en CPU en pocos segundos. No hace falta GPU.
+Todos los notebooks corren en CPU, sin GPU. La mayoría tarda unos segundos. Los de la parte 05 entrenan varias redes para compararlas y tardan entre 10 segundos y un minuto.
 
 ## Próximos módulos
 

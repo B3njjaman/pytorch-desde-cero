@@ -78,7 +78,6 @@ Todos los notebooks corren en CPU, sin GPU. La mayoría tarda unos segundos. Los
 
 ## Próximos módulos
 
-- Clasificación de imágenes con una red densa (MNIST), con conjuntos de entrenamiento y validación.
 - Sobreajuste y regularización: dropout, parada temprana, decaimiento de pesos.
 - Redes convolucionales.
 - Programación de la tasa de aprendizaje y normalización por lotes.

@@ -11,7 +11,7 @@ Este módulo sigue el primer módulo del curso de PyTorch de DeepLearning.AI en 
 | [02 · Descenso de gradiente](02-descenso-de-gradiente) | [Descenso de gradiente](02-descenso-de-gradiente/01_descenso_de_gradiente.ipynb) · [SGD y mini-batches](02-descenso-de-gradiente/02_sgd_y_minibatches.ipynb) |
 | [03 · Optimalidad](03-optimalidad) | [Mínimos, convexidad y puntos silla](03-optimalidad/01_optimalidad.ipynb) |
 | [04 · Matemática de PyTorch](04-matematica-de-pytorch) | [Autograd y regla de la cadena](04-matematica-de-pytorch/01_autograd_y_regla_de_la_cadena.ipynb) · [Capas y activaciones](04-matematica-de-pytorch/02_capas_y_activaciones.ipynb) · [Funciones de pérdida](04-matematica-de-pytorch/03_funciones_de_perdida.ipynb) · [Optimizadores](04-matematica-de-pytorch/04_optimizadores.ipynb) |
-| [05 · Profundización](05-profundizacion) | [El perceptrón de Rosenblatt](05-profundizacion/01_perceptron.ipynb) · [XOR y redes feedforward](05-profundizacion/02_xor_y_redes_feedforward.ipynb) · [La espiral: fronteras de decisión](05-profundizacion/03_espiral_y_fronteras_de_decision.ipynb) · [Ajuste polinomial y sobreajuste](05-profundizacion/04_ajuste_polinomial_y_sobreajuste.ipynb) |
+| [05 · Profundización](05-profundizacion) | [El perceptrón de Rosenblatt](05-profundizacion/01_perceptron.ipynb) · [XOR y redes feedforward](05-profundizacion/02_xor_y_redes_feedforward.ipynb) · [La espiral: fronteras de decisión](05-profundizacion/03_espiral_y_fronteras_de_decision.ipynb) · [Ajuste polinomial y sobreajuste](05-profundizacion/04_ajuste_polinomial_y_sobreajuste.ipynb) · [Buscador de tasa y one-cycle](05-profundizacion/05_buscador_de_tasa_y_one_cycle.ipynb) |
 
 La descripción de cada notebook está en el [README principal](../README.md).
 
@@ -41,7 +41,7 @@ Esta es la lista de lecturas que el curso recomienda para el módulo 1, ordenada
 - **[Documentación de PyTorch](https://docs.pytorch.org/docs/stable/index.html)**. La referencia de cada función, con la filosofía de ejecución inmediata (*eager*) de PyTorch, sus APIs principales y las librerías del ecosistema.
 - **[PyTorch 2.x](https://pytorch.org/get-started/pytorch-2-x/)**. Qué trae la serie 2.x: `torch.compile`, el compilador Inductor y las mejoras de rendimiento.
 - **[Huang, Stevens, Antiga y Viehmann: Deep Learning with PyTorch, 2.ª edición](https://www.manning.com/books/deep-learning-with-pytorch-second-edition)** (libro, Manning). Patrones y recetas para construir, entrenar y desplegar modelos en PyTorch de principio a fin.
-- **[fast.ai: Practical Deep Learning for Coders](https://course.fast.ai/)** (curso y libro, gratis). Enfoque de arriba hacia abajo: primero se entrenan modelos buenos en proyectos reales y después se estudia cómo funcionan.
+- **[fast.ai: Practical Deep Learning for Coders](https://course.fast.ai/)** (curso y libro, gratis). Enfoque de arriba hacia abajo: primero se entrenan modelos buenos en proyectos reales y después se estudia cómo funcionan. **En código:** [buscador de tasa y one-cycle](05-profundizacion/05_buscador_de_tasa_y_one_cycle.ipynb).
 
 ### Deep learning: teoría
 

@@ -11,12 +11,13 @@ Este módulo sigue el primer módulo del curso de PyTorch de DeepLearning.AI en 
 | [02 · Descenso de gradiente](02-descenso-de-gradiente) | [Descenso de gradiente](02-descenso-de-gradiente/01_descenso_de_gradiente.ipynb) · [SGD y mini-batches](02-descenso-de-gradiente/02_sgd_y_minibatches.ipynb) |
 | [03 · Optimalidad](03-optimalidad) | [Mínimos, convexidad y puntos silla](03-optimalidad/01_optimalidad.ipynb) |
 | [04 · Matemática de PyTorch](04-matematica-de-pytorch) | [Autograd y regla de la cadena](04-matematica-de-pytorch/01_autograd_y_regla_de_la_cadena.ipynb) · [Capas y activaciones](04-matematica-de-pytorch/02_capas_y_activaciones.ipynb) · [Funciones de pérdida](04-matematica-de-pytorch/03_funciones_de_perdida.ipynb) · [Optimizadores](04-matematica-de-pytorch/04_optimizadores.ipynb) |
+| [05 · Profundización](05-profundizacion) | [El perceptrón de Rosenblatt](05-profundizacion/01_perceptron.ipynb) |
 
 La descripción de cada notebook está en el [README principal](../README.md).
 
 ## Recursos para profundizar
 
-Esta es la lista de lecturas que el curso recomienda para el módulo 1, ordenada por tema. Donde un recurso calza con una parte de este repositorio, se indica cuál. Las diapositivas de las clases están en la [comunidad de DeepLearning.AI](https://community.deeplearning.ai/) y hace falta una cuenta para verlas.
+Esta es la lista de lecturas que el curso recomienda para el módulo 1, ordenada por tema. Donde un recurso calza con una parte de este repositorio, se indica cuál. Los que tienen un notebook propio en `05-profundizacion` lo indican con **En código**. Las diapositivas de las clases están en la [comunidad de DeepLearning.AI](https://community.deeplearning.ai/) y hace falta una cuenta para verlas.
 
 ### Fundamentos
 

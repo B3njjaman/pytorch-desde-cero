@@ -27,8 +27,8 @@ Esta es la lista de lecturas que el curso recomienda para el módulo 1, ordenada
 
 ### IA: historia y contexto
 
-- **[Melanie Mitchell: Artificial Intelligence: A Guide for Thinking Humans](https://melaniemitchell.me/aibook/)** (libro). Un panorama accesible y equilibrado de lo que la IA puede y no puede hacer, y por qué importa.
-- **[Nils J. Nilsson: The Quest for Artificial Intelligence](https://ai.stanford.edu/~nilsson/QAI/qai.pdf)** (libro, PDF gratis). La historia completa de la IA, desde los sistemas simbólicos hasta el machine learning moderno.
+- **[Melanie Mitchell: Artificial Intelligence: A Guide for Thinking Humans](https://melaniemitchell.me/aibook/)** (libro). Un panorama accesible y equilibrado de lo que la IA puede y no puede hacer, y por qué importa. **En código:** [el perceptrón de Rosenblatt](05-profundizacion/01_perceptron.ipynb).
+- **[Nils J. Nilsson: The Quest for Artificial Intelligence](https://ai.stanford.edu/~nilsson/QAI/qai.pdf)** (libro, PDF gratis). La historia completa de la IA, desde los sistemas simbólicos hasta el machine learning moderno. **En código:** [el perceptrón de Rosenblatt](05-profundizacion/01_perceptron.ipynb).
 
 ### Machine learning en general
 

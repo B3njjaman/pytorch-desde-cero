@@ -8,6 +8,33 @@ La idea es entender qué hace cada línea y por qué: primero se usa una herrami
 
 SGD, momentum y Adam bajando por tres superficies de pérdida desde el mismo punto, con la misma tasa de aprendizaje. Es el tema de [Optimizadores](modulo-1/04-matematica-de-pytorch/04_optimizadores.ipynb) en el módulo 1 y de [Gradientes y optimizadores](modulo-2/02-entrenamiento/02_gradientes_y_optimizadores.ipynb) en el módulo 2. Imagen hecha con [bn-lab-simulations](https://github.com/4mser/bn-lab-simulations).
 
+## Así se ven los notebooks
+
+Cada notebook alterna explicación, código y resultados, y se puede leer en GitHub sin ejecutar nada. Algunas celdas:
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="modulo-2/04-clasificacion-de-imagenes/01_mnist_de_punta_a_punta.ipynb"><img src="imagenes/notebook-errores-confiados.png" alt="Las 12 imágenes de MNIST en que el modelo se equivocó con más confianza"></a>
+      <br><b>MNIST de punta a punta</b>: los errores en que el modelo estaba más seguro, todos con una confianza de prácticamente 100%.
+    </td>
+    <td width="50%" valign="top">
+      <a href="modulo-2/04-clasificacion-de-imagenes/02_experimentos_con_mnist.ipynb"><img src="imagenes/notebook-olvido-catastrofico.png" alt="Exactitud de prueba durante una época con los datos mezclados, tal como vienen y ordenados por dígito"></a>
+      <br><b>Experimentos con MNIST</b>: con los datos ordenados por dígito, el modelo olvida cada dígito al pasar al siguiente.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="modulo-2/02-entrenamiento/02_gradientes_y_optimizadores.ipynb"><img src="imagenes/notebook-orden-del-paso.png" alt="Pérdida del mismo entrenamiento con el orden de zero_grad, backward y step cambiado"></a>
+      <br><b>Gradientes y optimizadores</b>: el mismo entrenamiento con el orden de <code>zero_grad</code>, <code>backward</code> y <code>step</code> cambiado. Solo el orden correcto aprende.
+    </td>
+    <td width="50%" valign="top">
+      <a href="modulo-1/05-profundizacion/03_espiral_y_fronteras_de_decision.ipynb"><img src="imagenes/notebook-espiral.png" alt="Frontera de decisión de una red en la espiral, con las rectas de sus 100 neuronas ocultas"></a>
+      <br><b>La espiral</b>: la frontera de decisión de una red y las rectas de sus 100 neuronas ocultas, de las que está hecha.
+    </td>
+  </tr>
+</table>
+
 ## Contenido
 
 Los notebooks siguen los módulos del curso de PyTorch de DeepLearning.AI en Coursera. Cada módulo es una carpeta, dividida en partes.

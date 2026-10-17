@@ -35,9 +35,25 @@ La parte 05 lleva a código las lecturas recomendadas del módulo: cada notebook
 
 Lecturas y videos recomendados para este módulo: [Recursos para profundizar](modulo-1/README.md#recursos-para-profundizar).
 
+### [Módulo 2: el flujo de trabajo de PyTorch](modulo-2)
+
+| Parte | Notebook | Qué cubre |
+|---|---|---|
+| **00 · Datos** | [Transforms, Dataset y DataLoader](modulo-2/00-datos/01_transforms_dataset_y_dataloader.ipynb) | MNIST con `torchvision`, `ToTensor`, `Normalize` y de dónde salen 0.1307 y 0.3081, `Compose`, transformaciones aleatorias, un `Dataset` que carga a pedido, lotes y mezcla con `DataLoader`, y cuánto cuesta transformar en cada época |
+| **01 · Modelos** | [De `Sequential` a `nn.Module`](modulo-2/01-modelos/01_nn_module.ipynb) | `__init__` y `forward`, qué registra `super().__init__()`, capas en listas que no se entrenan, `model(x)` contra `model.forward(x)`, `Flatten` y cómo leer un error de formas, contar parámetros, conexiones residuales, `eval()` y `no_grad()` |
+| **02 · Entrenamiento** | [MSE y entropía cruzada en la práctica](modulo-2/02-entrenamiento/01_funciones_de_perdida_en_la_practica.ipynb) | Por qué elevar al cuadrado, logits y `softmax`, el costo de equivocarse con confianza, qué espera `CrossEntropyLoss`, el doble `softmax`, MSE para clasificar y por qué las pérdidas no se comparan entre sí |
+| | [Gradientes y optimizadores](modulo-2/02-entrenamiento/02_gradientes_y_optimizadores.ipynb) | `backward()` no actualiza, qué dice el signo de un gradiente, por qué `zero_grad()`, cuatro órdenes equivocados y qué hace cada uno, acumulación de gradientes, tasas de aprendizaje de `SGD` contra `Adam` y por qué `Adam` no usa la tasa de `SGD` |
+| **03 · Dispositivos** | [CPU, GPU y dónde vive cada tensor](modulo-2/03-dispositivos/01_cpu_gpu_y_dispositivos.ipynb) | `cuda`, `mps` y `cpu`, el error de dispositivos (reproducido sin GPU), `.to()` en tensores y en modelos, el patrón estándar, volver a NumPy, de qué depende la memoria de un entrenamiento y cuándo conviene la GPU |
+| **04 · Clasificación de imágenes** | [MNIST de punta a punta](modulo-2/04-clasificacion-de-imagenes/01_mnist_de_punta_a_punta.ipynb) | El entrenamiento completo con validación, diez épocas, la prueba una sola vez, exactitud por dígito, matriz de confusión, los errores más confiados y un mensaje secreto escrito con dígitos |
+| | [Experimentos con MNIST](modulo-2/04-clasificacion-de-imagenes/02_experimentos_con_mnist.ipynb) | Qué pasa sin mezclar y con los datos ordenados por dígito, lotes de 16, 64 y 512 medidos en épocas y en segundos, y por qué una red densa aprende igual con los píxeles desordenados |
+
+El módulo 2 usa MNIST, que los notebooks descargan la primera vez en `modulo-2/data`.
+
 ## Orden sugerido
 
 Dentro del módulo 1, las partes 00 a 03 están pensadas para leerse en orden. La parte 04 es más formal y se puede leer al final o ir consultando a medida que aparecen las funciones en las partes anteriores. Los notebooks de la parte 05 son independientes entre sí y suponen haber leído hasta la parte 01.
+
+El módulo 2 supone haber leído hasta la parte 01 del módulo 1. Sus partes siguen el orden del curso, y la parte 04 junta todo lo anterior.
 
 Conocimientos previos: Python básico. Para las partes 03 y 04 ayuda haber visto derivadas y matrices, aunque todo lo que se usa se explica en el momento.
 
@@ -58,15 +74,14 @@ También se pueden abrir directamente en VS Code con la extensión de Jupyter.
 
 Abre `https://colab.research.google.com/github/B3njjaman/pytorch-desde-cero` y elige el notebook. Colab ya trae PyTorch instalado.
 
-Todos los notebooks corren en CPU, sin GPU. La mayoría tarda unos segundos. Los de la parte 05 entrenan varias redes para compararlas y tardan entre 10 segundos y un minuto.
+Todos los notebooks corren en CPU, sin GPU. La mayoría tarda unos segundos. Los de la parte 05 del módulo 1 entrenan varias redes para compararlas y tardan entre 10 segundos y un minuto. En el módulo 2, los de las partes 00 a 03 tardan menos de un minuto cada uno, `MNIST de punta a punta` unos cuatro minutos y `Experimentos con MNIST` alrededor de un minuto y medio.
 
 ## Próximos módulos
 
-- Clasificación de imágenes con una red densa (MNIST), con conjuntos de entrenamiento y validación.
 - Sobreajuste y regularización: dropout, parada temprana, decaimiento de pesos.
 - Redes convolucionales.
 - Programación de la tasa de aprendizaje y normalización por lotes.
 
 ## Créditos
 
-El escenario del repartidor de `modulo-1/01-red-neuronal-simple` está inspirado en el primer laboratorio del curso de PyTorch de DeepLearning.AI en Coursera. Los datos, el código y las explicaciones de este repositorio son propios. La lista de lecturas de cada módulo es la que recomienda ese curso.
+El escenario del repartidor de `modulo-1/01-red-neuronal-simple` está inspirado en el primer laboratorio del curso de PyTorch de DeepLearning.AI en Coursera, y el mensaje secreto de `modulo-2/04-clasificacion-de-imagenes`, en la presentación del segundo módulo del mismo curso. Los datos, el código y las explicaciones de este repositorio son propios. La lista de lecturas de cada módulo es la que recomienda ese curso.

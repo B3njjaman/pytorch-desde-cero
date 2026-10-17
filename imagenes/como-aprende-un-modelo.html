@@ -1,0 +1,130 @@
+<!doctype html>
+<!--
+  Fuente de imagenes/como-aprende-un-modelo.png, hecha con bn-lab-simulations
+  (https://github.com/4mser/bn-lab-simulations, licencia MIT), experimento optimizers.
+
+  Para regenerarla, con Chrome:
+    chrome --headless=new --hide-scrollbars --force-device-scale-factor=2 --window-size=1260,658
+           --virtual-time-budget=4000 --screenshot=como-aprende-un-modelo.png como-aprende-un-modelo.html
+  y después reducirla a 2000 px de ancho.
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Cómo aprende un modelo</title>
+<style>
+  body { margin: 0; background: #0b0f17; font-family: "Segoe UI", system-ui, sans-serif; }
+  #figura { width: 1260px; padding: 28px 30px 22px; background: #0b0f17; color: #e8eaee; box-sizing: border-box; }
+  h1 { font-size: 27px; font-weight: 600; margin: 0 0 6px; letter-spacing: -0.2px; }
+  .sub { color: #9aa4b2; font-size: 16px; margin: 0 0 20px; }
+  .paneles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .panel h2 { font-size: 16px; font-weight: 600; margin: 0 0 8px; }
+  .panel p { font-size: 14px; color: #a7b0bd; margin: 10px 0 0; line-height: 1.45; }
+  canvas { width: 100%; aspect-ratio: 1; display: block; border-radius: 10px; background: #000; }
+  .pie { display: flex; gap: 24px; margin-top: 18px; font-size: 15px; align-items: center; }
+  .linea { display: inline-block; width: 28px; height: 4px; border-radius: 2px; margin-right: 8px; vertical-align: middle; }
+  .credito { margin-left: auto; color: #6b7585; font-size: 13px; }
+</style>
+</head>
+<body>
+<div id="figura">
+  <h1>Cómo aprende un modelo</h1>
+  <p class="sub">Tres optimizadores bajando por la misma superficie de pérdida, desde el mismo punto y con la misma tasa de aprendizaje.</p>
+  <div class="paneles">
+    <div class="panel">
+      <h2>Un valle angosto y curvo</h2>
+      <canvas data-paisaje="0"></canvas>
+      <p>La pendiente apunta a las paredes del valle, no al mínimo. Momentum y Adam ya llegaron; SGD sigue avanzando por el fondo.</p>
+    </div>
+    <div class="panel">
+      <h2>Un punto silla</h2>
+      <canvas data-paisaje="1"></canvas>
+      <p>Sobre la cresta el gradiente es casi cero. Adam sale en pocos pasos y momentum poco después; SGD sigue atascado.</p>
+    </div>
+    <div class="panel">
+      <h2>Un cuenco con baches</h2>
+      <canvas data-paisaje="2"></canvas>
+      <p>Solo momentum lleva velocidad para pasar el primer bache. SGD y Adam hacen el mismo camino y quedan en el mismo mínimo local.</p>
+    </div>
+  </div>
+  <div class="pie">
+    <span><span class="linea" style="background:#ffb020"></span>SGD</span>
+    <span><span class="linea" style="background:#36d399"></span>momentum</span>
+    <span><span class="linea" style="background:#ff5c8a"></span>Adam</span>
+    <span class="credito">Simulación: bn-lab-simulations, experimento <code>optimizers</code> (MIT)</span>
+  </div>
+</div>
+
+<script>
+  // Colores propios para cada optimizador y textos en español. El experimento
+  // dibuja los tres con el mismo color y distinta opacidad, y escribe en inglés.
+  const ACENTO = '200,205,215';
+  const COLORES = { '0.45': '#ffb020', '0.7': '#36d399', '1': '#ff5c8a' };
+  const PASOS = 200;
+
+  const reemplazo = {};
+  for (const [alfa, color] of Object.entries(COLORES)) reemplazo[`rgba(${ACENTO},${alfa})`] = color;
+  const proto = CanvasRenderingContext2D.prototype;
+  for (const prop of ['strokeStyle', 'fillStyle']) {
+    const d = Object.getOwnPropertyDescriptor(proto, prop);
+    Object.defineProperty(proto, prop, {
+      configurable: true,
+      get() { return d.get.call(this); },
+      set(v) { d.set.call(this, reemplazo[v] ?? v); }
+    });
+  }
+  const fuente = Object.getOwnPropertyDescriptor(proto, 'font');
+  Object.defineProperty(proto, 'font', {
+    configurable: true,
+    get() { return fuente.get.call(this); },
+    set(v) { fuente.set.call(this, v === '11px monospace' ? '600 13px Consolas, monospace' : v); }
+  });
+  // Las lecturas de pérdida van abajo a la izquierda, donde no pasa ninguna trayectoria.
+  const ORDEN = { SGD: 0, momentum: 1, Adam: 2 };
+  const escribir = proto.fillText;
+  proto.fillText = function (texto, x, y, ...resto) {
+    const alto = this.canvas.height / devicePixelRatio;
+    let m;
+    if ((m = /^(SGD|momentum|Adam)  loss (.*)$/.exec(texto))) {
+      texto = m[1].padEnd(9) + ' pérdida ' + m[2];
+      y = alto - 70 + ORDEN[m[1]] * 17;
+    }
+    else if ((m = /^same start, same learning rate (\S+)   steps (\d+)$/.exec(texto))) texto = `tasa ${m[1]}   ${m[2]} pasos`;
+    else if (texto.includes(' — ')) return;        // la descripción del paisaje va en el título del panel
+    return escribir.call(this, texto, x, y, ...resto);
+  };
+
+  // El experimento dibuja las curvas de nivel con el eje y al revés que las
+  // trayectorias (la fila 0 de la imagen es y = -2.2, pero se pinta arriba).
+  // Se invierte la imagen al dibujarla para que coincidan.
+  const pintar = proto.drawImage;
+  proto.drawImage = function (img, ...args) {
+    if (img instanceof HTMLCanvasElement && img.width === 90 && img.height === 90 && args.length === 4) {
+      const [dx, dy, dw, dh] = args;
+      this.save();
+      this.translate(0, 2 * dy + dh);
+      this.scale(1, -1);
+      pintar.call(this, img, dx, dy, dw, dh);
+      this.restore();
+      return;
+    }
+    return pintar.call(this, img, ...args);
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/gh/4mser/bn-lab-simulations@63f209b95fe9aa3ef579b6dabcb1a3d4a76907ea/dist/bn-lab-simulations.min.js"></script>
+<script>
+  window.listo = false;
+  addEventListener('load', () => {
+    for (const lienzo of document.querySelectorAll('canvas')) {
+      const sim = BNLab.mount(lienzo, 'optimizers', {
+        autoplay: false, locale: 'es',
+        theme: { mode: 'dark', accent: ACENTO },
+        params: { land: +lienzo.dataset.paisaje }
+      });
+      sim.step(PASOS);
+    }
+    window.listo = true;
+  });
+</script>
+</body>
+</html>

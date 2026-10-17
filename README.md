@@ -4,6 +4,10 @@ Curso de PyTorch en español, en notebooks. Cada notebook explica un tema paso a
 
 La idea es entender qué hace cada línea y por qué: primero se usa una herramienta, después se abre para ver cómo funciona, y al final se justifica con su matemática.
 
+![SGD, momentum y Adam bajando por tres superficies de pérdida: un valle angosto, un punto silla y un cuenco con baches](imagenes/como-aprende-un-modelo.png)
+
+SGD, momentum y Adam bajando por tres superficies de pérdida desde el mismo punto, con la misma tasa de aprendizaje. Es el tema de [Optimizadores](modulo-1/04-matematica-de-pytorch/04_optimizadores.ipynb) en el módulo 1 y de [Gradientes y optimizadores](modulo-2/02-entrenamiento/02_gradientes_y_optimizadores.ipynb) en el módulo 2. Imagen hecha con [bn-lab-simulations](https://github.com/4mser/bn-lab-simulations).
+
 ## Contenido
 
 Los notebooks siguen los módulos del curso de PyTorch de DeepLearning.AI en Coursera. Cada módulo es una carpeta, dividida en partes.

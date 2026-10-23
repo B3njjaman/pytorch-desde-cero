@@ -33,6 +33,16 @@ Cada notebook alterna explicación, código y resultados, y se puede leer en Git
       <br><b>La espiral</b>: la frontera de decisión de una red y las rectas de sus 100 neuronas ocultas, de las que está hecha.
     </td>
   </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="modulo-3/05-profundizacion/01_fuga_de_datos.ipynb"><img src="imagenes/modulo3-fuga-de-datos.png" alt="Fotos de la prueba junto a las fotos de entrenamiento o validación más parecidas, con su similitud"></a>
+      <br><b>Fuga de datos</b>: fotos de prueba y sus parecidas en entrenamiento. Si se mezclan, la exactitud sale demasiado buena.
+    </td>
+    <td width="50%" valign="top">
+      <a href="modulo-4/00-convoluciones/01_filtros_y_mapas_de_caracteristicas.ipynb"><img src="imagenes/modulo4-filtros-conv2d.png" alt="Una foto de girasol y los ocho canales de salida de una capa convolucional"></a>
+      <br><b>Filtros y mapas de características</b>: lo que deja cada filtro de una capa convolucional sobre una foto de girasol.
+    </td>
+  </tr>
 </table>
 
 ## Contenido
@@ -80,11 +90,37 @@ Lecturas y videos recomendados para este módulo: [Recursos para profundizar](mo
 
 El módulo 2 usa MNIST, que los notebooks descargan la primera vez en `modulo-2/data`.
 
+### [Módulo 3: datos que un modelo puede usar](modulo-3)
+
+Un jardín botánico quiere reconocer flores en fotos. Aquí se arma el camino de los datos hasta el modelo, con el dataset Oxford Flowers 102 (8.189 fotos), y se revisan los errores que más cuestan: transforms mal puestos, datos que se cuelan entre conjuntos y archivos rotos.
+
+| Parte | Notebook | Qué cubre |
+|---|---|---|
+| **00 · Acceso** | [Un `Dataset` propio para Oxford Flowers](modulo-3/00-acceso/01_un_dataset_propio.ipynb) | Encontrar los archivos, asociar cada foto con su etiqueta y probar el `Dataset` antes de entrenar |
+| **01 · Calidad** | [Transforms para fotos de todos los tamaños](modulo-3/01-calidad/01_transforms_para_fotos.ipynb) | Fotos de tamaños distintos, `Resize` y `CenterCrop`, `ToTensor`, `Normalize`, PIL contra tensores y un pipeline completo |
+| **02 · Carga** | [Dividir los datos y armar los `DataLoader`](modulo-3/02-carga/01_division_y_dataloader.ipynb) | `random_split` 70/15/15, la trampa del transform compartido, la división oficial de Oxford, lotes y épocas |
+| **03 · Robustez** | [Pipelines a prueba de fallas](modulo-3/03-robustez/01_pipelines_a_prueba_de_fallas.ipynb) | Aumento de datos al vuelo, archivos rotos, `verify()` contra `load()` y monitoreo de la carga |
+| **05 · Profundización** | [Fuga de datos](modulo-3/05-profundizacion/01_fuga_de_datos.ipynb) · [Datos antes que el modelo](modulo-3/05-profundizacion/02_datos_antes_que_el_modelo.ipynb) · [Flowers 102 por dentro](modulo-3/05-profundizacion/03_flowers_102_el_articulo_original.ipynb) | Cómo se cuela la prueba en el entrenamiento, mejorar los datos con el modelo fijo, y el artículo original del dataset |
+
+### [Módulo 4: redes convolucionales y cómo mantenerlas](modulo-4)
+
+Usa el pipeline del módulo 3 para construir la convolución, armar una CNN y entender sus tamaños y campos receptivos. Después se ve cómo escribirla de forma que se pueda cambiar y depurar.
+
+| Parte | Notebook | Qué cubre |
+|---|---|---|
+| **00 · Convoluciones** | [Filtros y mapas de características](modulo-4/00-convoluciones/01_filtros_y_mapas_de_caracteristicas.ipynb) | La convolución a mano y con `F.conv2d`, `nn.Conv2d` por dentro, relleno, paso y parámetros compartidos |
+| **01 · Arquitectura** | [La arquitectura de una CNN](modulo-4/01-arquitectura/01_la_arquitectura_de_una_cnn.ipynb) | La receta de una CNN, *max pooling* a mano, entrenamiento, qué aprendió la red y su comparación con la red densa |
+| **03 · Grafos dinámicos** | [Grafos dinámicos](modulo-4/03-grafos-dinamicos/01_grafos_dinamicos.ipynb) | El grafo que se arma en cada pasada, `if` y bucles dentro del `forward`, entradas de largo variable y salida temprana |
+| **04 · Modular e inspección** | [Bloques, inspección y depuración](modulo-4/04-modular-e-inspeccion/01_bloques_inspeccion_y_depuracion.ipynb) | Refactorizar con `nn.Sequential` y bloques propios, inspeccionar parámetros y depurar errores de formas |
+| **05 · Profundización** | [Aritmética de la convolución](modulo-4/05-profundizacion/01_aritmetica_de_la_convolucion.ipynb) · [Campos receptivos](modulo-4/05-profundizacion/02_campos_receptivos.ipynb) | La guía de Dumoulin y Visin, los tamaños de salida, la transpuesta y el campo receptivo efectivo |
+
 ## Orden sugerido
 
 Dentro del módulo 1, las partes 00 a 03 están pensadas para leerse en orden. La parte 04 es más formal y se puede leer al final o ir consultando a medida que aparecen las funciones en las partes anteriores. Los notebooks de la parte 05 son independientes entre sí y suponen haber leído hasta la parte 01.
 
 El módulo 2 supone haber leído hasta la parte 01 del módulo 1. Sus partes siguen el orden del curso, y la parte 04 junta todo lo anterior.
+
+El módulo 3 supone haber leído el módulo 2, y sus partes 00 a 03 forman una secuencia. El módulo 4 supone haber leído el módulo 3 y la parte 04 del módulo 1 (autograd).
 
 Conocimientos previos: Python básico. Para las partes 03 y 04 ayuda haber visto derivadas y matrices, aunque todo lo que se usa se explica en el momento.
 
@@ -110,11 +146,12 @@ Todos los notebooks corren en CPU, sin GPU. La mayoría tarda unos segundos. Los
 ## Próximos módulos
 
 - Sobreajuste y regularización: dropout, parada temprana, decaimiento de pesos.
-- Redes convolucionales.
 - Programación de la tasa de aprendizaje y normalización por lotes.
 
 ## Créditos
 
 El escenario del repartidor de `modulo-1/01-red-neuronal-simple` está inspirado en el primer laboratorio del curso de PyTorch de DeepLearning.AI en Coursera, y el mensaje secreto de `modulo-2/04-clasificacion-de-imagenes`, en la presentación del segundo módulo del mismo curso. Los datos, el código y las explicaciones de este repositorio son propios. La lista de lecturas de cada módulo es la que recomienda ese curso.
+
+El dataset de flores del módulo 3, [Oxford Flowers 102](https://www.robots.ox.ac.uk/~vgg/data/flowers/102/), es de Maria-Elena Nilsback y Andrew Zisserman, del Visual Geometry Group de la Universidad de Oxford. Lo describieron en su [artículo de 2008](https://www.robots.ox.ac.uk/~vgg/publications/2008/Nilsback08/).
 
 La imagen del comienzo se hizo con [bn-lab-simulations](https://github.com/4mser/bn-lab-simulations) (licencia MIT), a partir de su experimento `optimizers`. Su fuente, para regenerarla, está en [`imagenes/como-aprende-un-modelo.html`](imagenes/como-aprende-un-modelo.html).
